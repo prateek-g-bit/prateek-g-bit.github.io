@@ -1,0 +1,17 @@
+---
+const { title, venue, year, desc, pdfLink } = Astro.props;
+---
+
+<div class="card" style="margin-bottom:18px;">
+  <div style="font-weight:600; margin-bottom:4px;">{title}</div>
+  <div style="font-size:0.8rem; color:var(--accent-strong); margin-bottom:8px;">
+    {venue} · {year}
+  </div>
+  <p style="font-size:0.85rem; color:var(--text-muted);">{desc}</p>
+
+  {pdfLink && (
+    <a href={pdfLink} target="_blank" class="btn-primary" style="margin-top:12px; display:inline-block;">
+      View Paper
+    </a>
+  )}
+</div>

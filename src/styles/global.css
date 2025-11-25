@@ -1,0 +1,94 @@
+:root {
+  --bg: #f9fafb;
+  --bg-alt: #ffffff;
+  --bg-subtle: #f3f4f6;
+  --text: #111827;
+  --text-muted: #6b7280;
+  --accent: #7c3aed;
+  --accent-soft: rgba(124, 58, 237, 0.08);
+  --accent-strong: #5b21b6;
+  --border-subtle: rgba(17, 24, 39, 0.08);
+  --radius-lg: 1.25rem;
+  --radius-pill: 999px;
+  --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.12);
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Inter",
+    "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: radial-gradient(circle at top, #eef2ff 0, #f9fafb 45%);
+  color: var(--text);
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 100px 20px 70px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent-strong);
+}
+
+.card {
+  background: var(--bg-alt);
+  border: 1px solid var(--border-subtle);
+  padding: 20px 22px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.badge-pill {
+  background: var(--accent-soft);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  color: var(--accent-strong);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #7c3aed, #5b21b6);
+  border-radius: var(--radius-pill);
+  padding: 8px 18px;
+  color: white;
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+.btn-ghost {
+  padding: 8px 18px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.grid-two {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 32px;
+}
+
+@media (max-width: 768px) {
+  .grid-two {
+    grid-template-columns: 1fr;
+  }
+}

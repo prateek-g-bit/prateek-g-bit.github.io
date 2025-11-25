@@ -1,11 +1,125 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import TimelineItem from "../components/TimelineItem.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout title="Prateek Gupta | ML & Data Science @ IIT Kharagpur">
+
+<section class="page-section">
+  <div class="grid-two">
+
+    <!-- LEFT COLUMN -->
+    <div>
+      <div class="badge-pill">ML · DS · DL · NLP · CV</div>
+
+      <h1 style="font-size:1.9rem; margin-top:10px;">
+        Hi, I’m Prateek — an undergraduate at IIT Kharagpur working across
+        Machine Learning, Data Science, Deep Learning, and Intelligent Control.
+      </h1>
+
+      <p style="color:var(--text-muted); margin-top:12px; font-size:0.95rem;">
+        I enjoy building end-to-end ML pipelines, experimenting with deep learning
+        architectures, and applying mathematical intuition to real-world problems.
+        I work in ML Engineering, Time Series Forecasting, NLP, Classical ML, and
+        neural network–based control.
+      </p>
+
+      <p style="color:var(--text-muted); margin-top:12px; font-size:0.95rem;">
+        I've completed projects in Deep Learning, NLP, Recommendation Systems, TDA,
+        Computer Vision, and embedded ML deployment. I also interned as a Data Science
+        Intern at Algostrauss where I worked on feature engineering, churn prediction,
+        model evaluation, and dashboard analytics.
+      </p>
+
+      <div style="
+  margin-top:20px;
+  margin-bottom:14px;     /* ← THIS IS THE FIX */
+  display:flex;
+  gap:12px;
+  align-items:center;
+">
+
+        <a href="/cv/CV_PRATEEK.pdf" class="btn-primary" target="_blank">CV</a>
+        <a href="/research" class="btn-ghost">Research</a>
+        <a href="/projects" class="btn-ghost">Projects</a>
+      </div>
+    </div>
+
+
+    <!-- RIGHT COLUMN: HEADSHOT + QUICK INFO -->
+    <div style="display:flex; flex-direction:column; gap:16px;">
+
+      <!-- Headshot card -->
+      <div class="card" style="text-align:center; padding:18px;">
+        <img
+          src="/image/prateek-headshot.png"
+          alt="Prateek Gupta"
+          style="
+            width:140px;
+            height:140px;
+            border-radius:999px;
+            object-fit:cover;
+            margin-bottom:10px;
+          "
+        />
+        <div style="font-weight:600; font-size:0.95rem;">
+          Prateek Gupta
+        </div>
+        <div style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">
+          ML & DS · IIT Kharagpur
+        </div>
+      </div>
+
+      <!-- Quick Info card -->
+      <div class="card">
+        <h3 style="margin-bottom:6px;">Quick Info</h3>
+        <ul style="padding-left:18px; color:var(--text-muted); font-size:0.85rem;">
+
+  <li>B.Tech + M.Tech Dual Degree, IIT Kharagpur</li>
+
+  <li>ML, DL, NLP, Data Science, Time Series, CV</li>
+
+  <li>Python, SQL, C, C++, Rust, MATLAB</li>
+
+  <li>PyTorch, TensorFlow, scikit-learn, HuggingFace</li>
+
+  <li>ML/DS Intern — Algostrauss</li>
+
+</ul>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="page-section">
+  <SectionTitle title="Highlighted Projects" eyebrow="Projects" />
+
+  <ProjectCard
+    title="Plant Genotype Classification using Persistent Homology"
+    tag="Research"
+    timeframe="2025"
+    bullets={[
+      "Built PH + skeleton-based phenotyping pipeline",
+      "Implemented filtrations, persistence images, TDA features",
+      "Achieved 94% accuracy on 10-genotype dataset"
+    ]}
+  />
+
+  <ProjectCard
+    title="Credit Card Offer Ranking System"
+    tag="ML Engineering"
+    timeframe="2025"
+    bullets={[
+      "LightGBM LambdaRank on 100M+ rows",
+      "250+ engineered features",
+      "MAP@7 improved from 0.32 → 0.44"
+    ]}
+  />
+</section>
+
+</BaseLayout>

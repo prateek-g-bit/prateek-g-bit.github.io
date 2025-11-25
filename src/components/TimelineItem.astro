@@ -1,0 +1,9 @@
+---
+const { title, org, meta, body } = Astro.props;
+---
+
+<div style="padding-left:14px; border-left:2px solid var(--accent-soft); margin-bottom:20px;">
+  <div style="font-weight:600;">{title}</div>
+  <div style="font-size:0.8rem; color:var(--text-muted);">{org} · {meta}</div>
+  {body && <p style="margin-top:6px; font-size:0.85rem; color:var(--text-muted);">{body}</p>}
+</div>

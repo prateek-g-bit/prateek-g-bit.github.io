@@ -1,0 +1,99 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import TimelineItem from "../components/TimelineItem.astro";
+---
+
+<BaseLayout
+  title="About · Prateek Gupta"
+  description="About Prateek Gupta, an undergraduate student at IIT Kharagpur."
+>
+  <section class="page-section">
+    <SectionTitle title="About me" eyebrow="Profile" />
+    <div class="grid-two">
+      <div>
+        <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:10px;">
+          I am a Dual Degree (B.Tech + M.Tech) student in Agricultural and Food
+          Engineering at IIT Kharagpur (India), focusing on Machine Learning,
+          Intelligent Control, and Time Series Analysis.
+        </p>
+        <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:10px;">
+          My work spans topological data analysis for plant phenotyping,
+          learning-based control models for embedded systems, and building
+          large-scale ML pipelines for financial and behavioral datasets.
+        </p>
+        <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:10px;">
+          I enjoy exploring data-driven modeling, representation learning,
+          algorithmic reasoning, and real-world deployment constraints for ML
+          systems. I am particularly interested in the intersection of scientific ML,
+          geometry, and control.
+        </p>
+        <p style="font-size:0.9rem; color:var(--text-muted);">
+          Outside academics, I participate in cultural & sports activities at IIT
+          Kharagpur, including theatre and tennis, and enjoy collaborating in
+          high-energy team environments.
+        </p>
+      </div>
+
+      <div>
+        <div class="card" style="margin-bottom:16px;">
+          <h3 style="font-size:0.95rem; margin-bottom:6px;">Quick facts</h3>
+          <ul style="font-size:0.8rem; color:var(--text-muted); padding-left:1.1rem;">
+            <li>Undergraduate at IIT Kharagpur (2022–2027)</li>
+            <li>Interested in ML, time series, and intelligent control</li>
+            <li>Experience with ML pipelines, embedded ML, and data systems</li>
+            <li>Also a guitarist, pianist & singer</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 style="font-size:0.95rem; margin-bottom:6px;">Awards & achievements</h3>
+          <ul style="font-size:0.8rem; color:var(--text-muted); padding-left:1.1rem;">
+            <li>Gold Medal – IIT Kharagpur General Championship Data Science Competition</li>
+            <li>Gold Medal – General Championship (Nukkad), IIT Kharagpur, Jan 2025</li>
+            <li>1st Place in Illumination 2025 (led a 100+ member team)</li>
+            <li>Represented district at State Level Lawn Tennis Tournament</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UPDATED MINIMAL & ELEGANT SKILLS SECTION -->
+  <section class="page-section">
+    <SectionTitle title="Skills" />
+    <div class="card">
+      <div style="display:flex; flex-direction:column; gap:1rem; font-size:0.85rem;">
+
+        <div>
+          <div style="font-weight:550; margin-bottom:4px;">Programming</div>
+          <div style="color:var(--text-muted);">
+            Python · C/C++ · SQL · MATLAB · Rust
+          </div>
+        </div>
+
+        <div>
+          <div style="font-weight:550; margin-bottom:4px;">Machine Learning & AI</div>
+          <div style="color:var(--text-muted);">
+            PyTorch · TensorFlow · Scikit-learn · Time Series · Representation Learning
+          </div>
+        </div>
+
+        <div>
+          <div style="font-weight:550; margin-bottom:4px;">Tools</div>
+          <div style="color:var(--text-muted);">
+            Git/GitHub · MLflow · Docker · CUDA · Tableau · OpenCV
+          </div>
+        </div>
+
+        <div>
+          <div style="font-weight:550; margin-bottom:4px;">Core Interests</div>
+          <div style="color:var(--text-muted);">
+            Machine Learning · Intelligent Control · Time-Series Forecasting · Topological Data Analysis
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>

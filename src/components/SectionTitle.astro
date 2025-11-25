@@ -1,0 +1,10 @@
+---
+const { title, eyebrow } = Astro.props;
+---
+
+<div style="margin-bottom: 18px;">
+  {eyebrow && <div class="badge-pill">{eyebrow}</div>}
+
+  <!-- Increased space between eyebrow and title -->
+  <h2 style="font-size:1.4rem; margin-top:14px;">{title}</h2>
+</div>

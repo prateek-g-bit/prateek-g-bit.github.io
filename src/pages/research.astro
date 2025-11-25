@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import PublicationItem from "../components/PublicationItem.astro";
+---
+
+<BaseLayout title="Research | Prateek Gupta">
+
+<SectionTitle title="Research" eyebrow="Topological ML · Phenotyping" />
+
+<p style="font-size:0.95rem; color:var(--text-muted); margin-bottom:20px;">
+  My research interests lie broadly in Machine Learning, Deep Learning,
+  and mathematical methods for structured data. One of my recent projects
+  applied Persistent Homology to plant phenotype analysis, using topological
+  descriptors and ML classifiers to study genotype differences.
+</p>
+
+
+<PublicationItem
+  title="Topological Analysis of Plant Structure Using PH for Genotype Classification"
+  venue="ACM ICVGIP"
+  year="2025"
+  desc="Implemented full PH pipeline: segmentation, skeletonization, filtrations, persistence images, and classification (RF, SVM, MLP). Achieved 94% accuracy."
+  pdfLink="/cv/plant_ph_paper.pdf"
+/>
+
+<div style="margin-top:30px;">
+  <a class="btn-primary" href="/cv/BTP_Report.pdf" target="_blank">View Full BTP Report</a>
+  <a class="btn-ghost" href="/cv/BTP_Presentation.pdf" target="_blank">View Presentation Slides</a>
+</div>
+
+</BaseLayout>

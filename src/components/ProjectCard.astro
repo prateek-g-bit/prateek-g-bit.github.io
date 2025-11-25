@@ -1,0 +1,75 @@
+---
+const { title, tag, timeframe, bullets = [] } = Astro.props;
+---
+
+<div
+  class="card"
+  style="
+    margin-bottom: 22px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    border-radius: 22px;
+  "
+>
+  <div
+    style="
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:1.2rem;
+      margin-bottom: 6px;
+    "
+  >
+    <div style="flex:1;">
+      <div
+        style="
+          font-size:1.05rem;
+          font-weight:600;
+          margin-bottom:6px;
+        "
+      >
+        {title}
+      </div>
+
+      <div
+        style="
+          font-size:0.78rem;
+          color:var(--text-muted);
+          margin-bottom:10px;
+        "
+      >
+        {timeframe}
+      </div>
+    </div>
+
+    {tag && (
+      <div
+        class="badge-pill"
+        style="
+          margin-top:2px;
+          padding:0.28rem 0.8rem;
+          font-size:0.78rem;
+          white-space:nowrap;
+        "
+      >
+        {tag}
+      </div>
+    )}
+  </div>
+
+  {bullets.length > 0 && (
+    <ul
+      style="
+        margin-top: 2px;
+        font-size:0.85rem;
+        color:var(--text-muted);
+        padding-left:1.1rem;
+        line-height:1.45;
+      "
+    >
+      {bullets.map((b) => (
+        <li>{b}</li>
+      ))}
+    </ul>
+  )}
+</div>

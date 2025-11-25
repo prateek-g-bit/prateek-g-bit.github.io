@@ -1,0 +1,71 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+---
+
+<BaseLayout title="Projects | Prateek Gupta">
+
+<SectionTitle title="Projects" eyebrow="Machine Learning · DS · Control" />
+
+<ProjectCard
+  title="Credit Card Offer Ranking"
+  tag="Learning to Rank"
+  timeframe="AMEX Hackathon 2025"
+  bullets={[
+    "100M+ records · 250 engineered features",
+    "LightGBM LambdaRank + Optuna",
+    "MAP@7 improved by 38%"
+  ]}
+/>
+
+<ProjectCard
+  title="Neural PID-ACC Controller"
+  tag="Control"
+  timeframe="2025"
+  bullets={[
+    "Replaced PID with TinyNN 6→8→1 model",
+    "<5ms inference on Raspberry Pi",
+    "Stable PWM outputs in embedded environment"
+  ]}
+/>
+
+<ProjectCard
+  title="Nvidia Stock Forecasting"
+  tag="Time Series"
+  timeframe="2025"
+  bullets={[
+    "LSTM with 60-day window",
+    "Engineered 20+ TS features",
+    "RMSE improved by 18%"
+  ]}
+/>
+<ProjectCard
+  title="Named Entity Recognition"
+  tag="NLP"
+  timeframe="2025"
+  bullets={[
+    "Transformer model for NER.",
+    "BERT-based token classification.",
+    "Strong entity-level performance."
+  ]}
+/>
+
+<ProjectCard
+  title="Sentiment Analysis using RNN"
+  tag="NLP"
+  timeframe="2025"
+  bullets={[
+    "Built an RNN sentiment classifier.",
+    "Used tokenization and padding.",
+    "Trained a simple RNN model."
+  ]}
+/>
+
+
+
+
+
+
+
+</BaseLayout>
